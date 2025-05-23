@@ -6,28 +6,34 @@
     <div
       class="flex items-center justify-center gap-3 text-2xl font-extrabold tracking-wider"
     >
-      <span>📅</span>
-      <span>謝謝大家過去的支持！</span>
+      <span>過去兩月的精彩回顧 🔥</span>
     </div>
 
     <!-- 活動列表 -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div
-        v-for="(event, idx) in events"
-        :key="idx"
-        class="flex flex-col items-center bg-blue-500/70 rounded-xl p-2 shadow-md"
-        :class="getEventColor(event.date)"
+        v-for="(event, index) in events"
+        :key="index"
+        class="flex flex-col items-center rounded-xl p-2 shadow-md animate-fadein opacity-0"
+        :class="[getEventColor(event.date)]"
+        :style="{ animationDelay: `${index * 300 + 300}ms` }"
       >
         <div class="text-2xl mb-2">{{ event.icon }}</div>
         <div class="font-semibold text-base flex-1">{{ event.title }}</div>
-        <div v-if="event.desc" class="text-xs text-blue-200 mt-1">{{ event.desc }}</div>
-        <div class="text-xs text-slate-200 mt-1">{{ event.date }}</div>
+        <div v-if="event.desc" class="text-sm bg-white/10 px-2 py-1 mt-1">
+          {{ event.desc }}
+        </div>
+        <div class="text-xs mt-1">{{ event.date }}</div>
       </div>
     </div>
 
     <!-- 底部統計 -->
-    <div class="flex flex-col items-center gap-1">
-      <div class="flex items-center gap-2 text-xl font-bold mt-2">
+    <div class="flex flex-col items-center gap-1 opacity-0 animate-fadein"
+        :style="{
+            animationDelay: `${events.length * 300 + 1000}ms`
+        }"
+    >
+      <div class="flex items-center gap-2 text-lg font-bold mt-2">
         <span>🎉</span>
         <span>總計已有</span>
         <span class="text-yellow-300 text-2xl font-extrabold px-2"
@@ -40,9 +46,10 @@
 </template>
 
 <script setup lang="ts">
-import dayjs from 'dayjs';
+import dayjs from 'dayjs'
+
 const events = [
-{
+  {
     icon: '⚡',
     title: '第一場《Bolt.new App 工作坊》',
     date: '2025/04/12',
@@ -65,8 +72,8 @@ const events = [
   },
   {
     icon: '🛠️',
-    title: '《Vibe Coding 實作工作坊|0-1生成並部屬自己的第一個產品》',
-    desc: '使用 Vibe Coding 建立 Website （台中） (No-Code Desingers X Monospace X Zeabur)',
+    title: '《Vibe Coding 實作工作坊 | 0-1 生成並部屬自己的第一個產品》',
+    desc: '台中線下分享會 (No-Code Desingers X Monospace X Zeabur)',
     date: '2025/05/30',
   },
   {
@@ -78,13 +85,28 @@ const events = [
 ]
 
 const getEventColor = (date: string) => {
-    if (dayjs(date).isSame(dayjs('2025-05-24'))) {
-        return 'bg-yellow-400/80';
-    }
-
-    if (dayjs(date).isBefore(dayjs('2025-05-24'))) {
-        return 'bg-blue-500/70';
-    }
-    return 'bg-green-500/70';
+  if (dayjs(date).isSame(dayjs('2025-05-24'))) {
+    return 'bg-amber-400'
+  }
+  if (dayjs(date).isBefore(dayjs('2025-05-24'))) {
+    return 'bg-blue-500/70'
+  }
+  return 'bg-green-500/70'
 }
 </script>
+
+<style scoped>
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    /* transform: translateY(1.25rem); */
+  }
+  100% {
+    opacity: 1;
+    /* transform: translateY(0); */
+  }
+}
+.animate-fadein {
+  animation: fadein 0.7s cubic-bezier(.4,0,.2,1) forwards;
+}
+</style>
