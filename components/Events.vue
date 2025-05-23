@@ -1,12 +1,11 @@
 <template>
-  <div
-    class="w-full mx-auto bg-gradient-to-br from-[#223061] to-[#191f36] rounded-2xl shadow-2xl p-4 flex flex-col gap-4 text-white"
-  >
+  <Card>
+
     <!-- 標題 -->
     <div
       class="flex items-center justify-center gap-3 text-2xl font-extrabold tracking-wider"
     >
-      <span v-if="filter === 'all'">過去兩月的精彩回顧 🔥</span>
+      <span v-if="filter === 'before'">過去兩月的精彩回顧 🔥</span>
       <span v-if="filter === 'future'">未來活動 🔥</span>
     </div>
 
@@ -45,7 +44,7 @@
         <span>報名參加！</span>
       </div>
     </div>
-  </div>
+  </Card>
 </template>
 
 <script setup lang="ts">
@@ -105,6 +104,12 @@ const filteredEvents = computed(() => {
   if (props.filter === "all") {
     return events;
   }
+  if (props.filter === "before") {
+    return events.filter((event) =>
+      dayjs(event.date).isBefore(dayjs("2025-05-24"))
+    );
+  }
+
   return events.filter((event) =>
     dayjs(event.date).isAfter(dayjs("2025-05-24"))
   );

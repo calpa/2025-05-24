@@ -78,7 +78,7 @@ class: flex flex-col h-full justify-center items-center gap-4
 class: flex flex-col h-full justify-center items-center gap-4
 ---
 
-<Events />
+<Events filter="before" />
 
 ---
 layout: center
@@ -172,23 +172,24 @@ layout: center
 <img src="https://assets.calpa.me/bolt_new_homepage.avif" class="w-3/4 my-4 object-contain mx-auto" />
 
 ---
+layout: center
+---
 
-<div class="grid grid-cols-2 md:grid-cols-3 border p-6 rounded-xl shadow-2xl bg-white h-full">
+<Card>
   <!-- 標題 -->
-  <div class="col-span-full font-bold text-2xl text-gray-900 tracking-wide leading-snug flex items-center justify-center">
+  <div class="text-2xl">
     Bolt.new 的六大好處
   </div>
 
-  <!-- 說明文字 -->
-  <div class="cell">使用 Claude 模型理生成網站</div>
-  <div class="cell" style="animation-delay: 300ms;">瀏覽器內直接全端開發</div>
-  <div class="cell" style="animation-delay: 600ms;">整合 Netlify、Supabase 等服務</div>
-
-  <!-- 特點清單 -->
-  <div class="cell" style="animation-delay: 900ms;">由 StackBlitz 團隊打造</div>
-  <div class="cell" style="animation-delay: 1200ms;">可以安裝 npm 各種套件</div>
-  <div class="cell" style="animation-delay: 1500ms;">提供各種常見模板 (Astro, Next.js, React.js, Vue.js, Svelte.js)</div>
-</div>
+  <div class="grid grid-cols-2 md:grid-cols-3">
+    <div class="cell">使用 Claude 模型理生成網站</div>
+    <div class="cell" style="animation-delay: 300ms;">瀏覽器內直接全端開發</div>
+    <div class="cell" style="animation-delay: 600ms;">整合 Netlify、Supabase 等服務</div>
+    <div class="cell" style="animation-delay: 900ms;">由 StackBlitz 團隊打造</div>
+    <div class="cell" style="animation-delay: 1200ms;">可以安裝 npm 各種套件</div>
+    <div class="cell" style="animation-delay: 1500ms;">提供各種常見模板 (Astro, Next.js, React.js, Vue.js, Svelte.js)</div>
+  </div>
+</Card>
 
 
 <style>
@@ -204,25 +205,21 @@ layout: center
 layout: center
 ---
 
-<div class="grid grid-cols-2 md:grid-cols-3 border p-6 rounded-xl shadow-2xl bg-white h-full gap-4">
+<Card>
   <!-- 標題 -->
-  <div class="col-span-full font-bold text-2xl text-gray-900 tracking-wide leading-snug flex items-center justify-center">
+  <div class="text-2xl">
     Bolt.new 最適合打造哪些類型的 App？
   </div>
 
-  <!-- 特點 -->
-  <div class="bg-red-600 column">極速生成高質感網站</div>
-  <div class="bg-green-600 column" style="animation-delay: 1000ms;">新創/團隊敏捷開發 MVP</div>
-  <div class="bg-sky-600 column" style="animation-delay: 2000ms;">設計師/創作者線上作品集</div>
-
-  <!-- 手機 App 應用 -->
-  <div class="col-span-full font-bold text-lg text-gray-800 mt-4 flex items-center justify-center animate-fade-in animate-mode-backwards" style="animation-delay: 2500ms;">
-    ⬇️ 甚至一鍵產出手機 App
-  </div>
-  <div class="bg-indigo-600 column" style="animation-delay: 3000ms;">AI 實用工具 App</div>
-  <div class="bg-pink-600 column" style="animation-delay: 3500ms;">活動報名/參加 App</div>
-  <div class="bg-yellow-500 column" style="animation-delay: 4000ms;">生活習慣追蹤 App</div>
+<div class="grid grid-cols-2 md:grid-cols-3">
+  <div class="bg-red-600 column">專業落地頁</div>
+  <div class="bg-sky-600 column" style="animation-delay: 300ms;">創作者線上作品集</div>
+  <div class="bg-indigo-600 column" style="animation-delay: 600ms;">工具 App</div>
+  <div class="bg-pink-600 column" style="animation-delay: 900ms;">MVP</div>
+  <div class="bg-yellow-500 column" style="animation-delay: 1200ms;">活動報名 App</div>
+  <div class="bg-green-600 column" style="animation-delay: 1500ms;">生活習慣追蹤 App</div>
 </div>
+</Card>
 
 
 <style>
@@ -248,11 +245,12 @@ layout: center
 class: bg-[#172966] text-white
 ---
 
-## ⚡ 請務必先註冊 Bolt.new
+<Card padding="8">
+<h2>⚡ 請務必先註冊 Bolt.new</h2>
 
 為了接下來的實作，請用這個連結加入：
 
-<div class="text-yellow-300 text-lg font-bold my-4">
+<div class="text-yellow-300 text-lg font-bold">
   https://bolt.new/?rid=z0x4lz
 </div>
 
@@ -263,13 +261,17 @@ class: bg-[#172966] text-white
 <div class="text-sm text-white/60 mt-4">
 已有 <span class="text-yellow-300 font-bold text-lg">15</span> 位朋友 透過這個連結加入，謝謝大家的支持！
 </div>
+</Card>
 
 ---
 layout: center
 class: bg-[#172966] text-white
 ---
 
-## 💡 精選幾個真實的回應
+<Card padding="8">
+  <div class="text-2xl font-bold text-center leading-snug">
+    💡 精選回應
+  </div>
 
 <v-click>
 <div>
@@ -325,6 +327,7 @@ class: bg-[#172966] text-white
 </div>
 <div class="text-xs text-yellow-300"> 🎤 你也可以思考：哪一類是你的共鳴呢？</div>
 </v-click>
+</Card>
 
 ---
 layout: center

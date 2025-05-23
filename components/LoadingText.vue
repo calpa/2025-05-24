@@ -21,7 +21,8 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue';
+import { computed, ref } from 'vue';
+import { onSlideEnter, onSlideLeave } from '@slidev/client';
 
 const showDebute = ref(false);
 
@@ -43,7 +44,7 @@ const typingLoop = computed(() => {
   return 'typingLoop 10s steps(16, end) infinite';
 });
 
-onMounted(() => {
+onSlideEnter(() => {
   showDebute.value = false;
   
   if (props.isDebute) {
@@ -51,6 +52,10 @@ onMounted(() => {
       showDebute.value = true;
     }, 10000);
   }
+});
+
+onSlideLeave(() => {
+  showDebute.value = false;
 });
 </script>
 
