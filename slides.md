@@ -12,8 +12,10 @@ layout: center
 class: bg-[#172966] text-white font-mono
 ---
 
-<div class="text-2xl">用 Bolt.new 實作 3 款手機 App：零程式也能 1 小時做出作品</div>
-
+<div class="text-3xl font-bold text-center leading-snug">
+  用 Bolt.new + Expo<br />
+  零程式也能 1 小時做出 3 款手機 App
+</div>
 <div class="text-xs opacity-50">2025-05-24</div>
 
 <div class="text-xs italic opacity-50">Calpa Liu</div>
@@ -138,26 +140,222 @@ https://calpa.me/tools/ziwei/
 <img src="https://assets.calpa.me/紫微斗數排盤系統.avif" class="w-full my-4 object-contain mx-auto" />
 
 ---
+layout: center
+class: bg-[#172966] text-white
+---
+
+## 今天不只是 Demo，而是...
+
+> 帶你實際走一遍「從想法到 App」的完整流程！
+
+這場分享，會給你：
+
+- 一套實用的 AI Prompt 寫法
+- 一個 Bolt.new 的 App 實作框架
+- 一次動手打造 3 款 App 的實戰體驗
+
+🎯 目標：讓你以後只要幾分鐘，就能把點子變 App！
+
+
+---
 class: flex flex-col h-full justify-center items-center gap-4
 ---
 
 <SDLC />
 
 ---
+layout: center
+---
 
-Bolt.new
+## Bolt.new
+
+<img src="https://assets.calpa.me/bolt_new_homepage.avif" class="w-3/4 my-4 object-contain mx-auto" />
 
 ---
+
+<div class="grid grid-cols-2 md:grid-cols-3 border p-6 rounded-xl shadow-2xl bg-white h-full">
+  <!-- 標題 -->
+  <div class="col-span-full font-bold text-2xl text-gray-900 tracking-wide leading-snug flex items-center justify-center">
+    Bolt.new 的六大好處
+  </div>
+
+  <!-- 說明文字 -->
+  <div class="cell">使用 Claude 模型理生成網站</div>
+  <div class="cell" style="animation-delay: 300ms;">瀏覽器內直接全端開發</div>
+  <div class="cell" style="animation-delay: 600ms;">整合 Netlify、Supabase 等服務</div>
+
+  <!-- 特點清單 -->
+  <div class="cell" style="animation-delay: 900ms;">由 StackBlitz 團隊打造</div>
+  <div class="cell" style="animation-delay: 1200ms;">可以安裝 npm 各種套件</div>
+  <div class="cell" style="animation-delay: 1500ms;">提供各種常見模板 (Astro, Next.js, React.js, Vue.js, Svelte.js)</div>
+</div>
+
+
+<style>
+  .cell {
+    @apply flex items-center justify-center p-4 border border-slate-400 text-black;
+    @apply animate-fade-in;
+    @apply animate-mode-backwards;
+
+    @apply bg-green-600 text-white;
+  }
+</style>
+---
+layout: center
+---
+
+<div class="grid grid-cols-2 md:grid-cols-3 border p-6 rounded-xl shadow-2xl bg-white h-full gap-4">
+  <!-- 標題 -->
+  <div class="col-span-full font-bold text-2xl text-gray-900 tracking-wide leading-snug flex items-center justify-center">
+    Bolt.new 最適合打造哪些類型的 App？
+  </div>
+
+  <!-- 特點 -->
+  <div class="bg-red-600 column">極速生成高質感網站</div>
+  <div class="bg-green-600 column" style="animation-delay: 1000ms;">新創/團隊敏捷開發 MVP</div>
+  <div class="bg-sky-600 column" style="animation-delay: 2000ms;">設計師/創作者線上作品集</div>
+
+  <!-- 手機 App 應用 -->
+  <div class="col-span-full font-bold text-lg text-gray-800 mt-4 flex items-center justify-center animate-fade-in animate-mode-backwards" style="animation-delay: 2500ms;">
+    ⬇️ 甚至一鍵產出手機 App
+  </div>
+  <div class="bg-indigo-600 column" style="animation-delay: 3000ms;">AI 實用工具 App</div>
+  <div class="bg-pink-600 column" style="animation-delay: 3500ms;">活動報名/參加 App</div>
+  <div class="bg-yellow-500 column" style="animation-delay: 4000ms;">生活習慣追蹤 App</div>
+</div>
+
+
+<style>
+  .slidev-layout {
+    @apply p-0;
+  }
+
+  .column {
+    @apply flex items-center justify-center p-4 border text-white;
+    @apply animate-fade-in;
+    @apply animate-mode-backwards;
+  }
+</style>
+
+---
+layout: center
+---
+
+## 實作時間
+
+---
+layout: center
+class: bg-[#172966] text-white
+---
+
+## ⚡ 請務必先註冊 Bolt.new
+
+為了接下來的實作，請用這個連結加入：
+
+<div class="text-yellow-300 text-lg font-bold my-4">
+  https://bolt.new/?rid=z0x4lz
+</div>
+
+- 免費領取 200K tokens
+- 解鎖完整功能，不會卡在邀請頁
+- 升級 Pro 還能你我都拿 5M tokens 🎁
+
+<div class="text-sm text-white/60 mt-4">
+已有 <span class="text-yellow-300 font-bold text-lg">15</span> 位朋友 透過這個連結加入，謝謝大家的支持！
+</div>
+
+---
+layout: center
+class: bg-[#172966] text-white
+---
+
+## 💡 精選幾個真實的回應
+
+<v-click>
+<div>
+1️⃣「想做一款能追蹤每日飲食與情緒的小工具」<span class="text-xs text-yellow-300">（養成健康習慣從記錄開始）</span>
+</div>
+</v-click>
+
+<v-click>
+<div>
+2️⃣「打造給孩子用的教育 App，紀錄學習過程與成長」<span class="text-xs text-yellow-300">（爸爸媽媽的數位育兒筆記 📒）</span>
+</div>
+</v-click>
+
+<v-click>
+<div>
+3️⃣「幫助自己團隊管理任務的 AI 待辦清單」<span class="text-xs text-yellow-300">（幫你追進度，也幫你追老闆）</span>
+</div>
+</v-click>
+
+<v-click>
+<div>
+4️⃣「我不想再複製貼貼筆記，想要筆記自動分類整合」<span class="text-xs text-yellow-300">（懶人筆記救星，AI 排好一切）</span>
+</div>
+</v-click>
+
+<v-click>
+<div>
+5️⃣「地鐵導航 App，不用再問路就能知道哪個出口」<span class="text-xs text-yellow-300">（出口8號，不是恐怖遊戲那個啦）</span>
+</div>
+</v-click>
+
+<v-click>
+<div>
+6️⃣「設計給長輩使用的吃藥提醒 App，簡單、清楚最重要」<span class="text-xs text-yellow-300">（不只是提醒，更是一種陪伴）</span>
+</div>
+</v-click>
+
+<v-click>
+<div>
+7️⃣「做個記帳＋財務預測的工具，讓錢不再神隱」<span class="text-xs text-yellow-300">（花在哪、賺多少，一清二楚）</span>
+</div>
+</v-click>
+
+<v-click>
+<div>
+8️⃣「我真的每天都在想午餐吃什麼，想做『午餐決策 App』」<span class="text-xs text-yellow-300">（今天吃什麼？AI 來決定 🍜）</span>
+</div>
+</v-click>
+
+<v-click>
+<div>
+9️⃣「其實我沒有明確想法，但就是想學會怎麼把 idea 實現！」<span class="text-xs text-yellow-300">（這場講座就是為你準備的 💡）</span>
+</div>
+<div class="text-xs text-yellow-300"> 🎤 你也可以思考：哪一類是你的共鳴呢？</div>
+</v-click>
+
+---
+layout: center
+class: bg-[#172966] text-white
+---
+
+## 🗳 Voting Time！請到 Discord 投票！
+
+<div class="text-xl mt-4">你最想看哪一款 App 的現場實作？</div>
+
+1️⃣ 飲食情緒追蹤 App  
+2️⃣ 教育紀錄 App  
+3️⃣ AI 待辦清單  
+4️⃣ 自動整理筆記  
+5️⃣ 地鐵導航 App  
+6️⃣ 吃藥提醒 App  
+7️⃣ 財務記帳 App  
+8️⃣ 午餐決策 App  
+9️⃣ 學習如何實現 idea
+
+<div class="text-yellow-300 text-sm mt-6">
+📍 請到 Discord 的 <code>#2025-05-24</code> 頻道，對應貼上你的 emoji，例如 1️⃣ 2️⃣...
+</div>
 
 
 ---
 class: flex flex-col h-full justify-center items-center gap-4
 ---
 
-<Events />
+<Events filter="future" />
 
----
-layout: two-cols
 ---
 
 ## 📍 5/30（台中）｜Vibe Coding 工作坊
@@ -177,9 +375,6 @@ layout: two-cols
 🎟 報名連結：
 👉 https://go.calpa.me/2025-05-30
 
-::right::
-
-<img src="./assets/2025-05-30.png" class="w-72 my-4 object-contain mx-auto" />
 
 ---
 
@@ -194,8 +389,6 @@ layout: two-cols
 
 📍 地點：台北捷運站附近
 
-👥 已報名人數：17 / 30 人
-
 🆓 免費參加
 
 📌 報名表單：
@@ -208,5 +401,7 @@ layout: two-cols
 <img src="https://assets.calpa.me/感謝您讓我占用的寶貴時間.avif" class="w-2/3 my-4 object-contain mx-auto" />
 
 
-- 🎯 今天，我們完成了從需求分析到報名系統的一條龍自動化流程
-- 📩 有問題歡迎私訊，我會在 Discord 回應大家的提問！
+<div class="text-sm text-white/60 mt-2">💬 想繼續交流、也歡迎私訊我或加入 Discord 群組！</div>
+
+<div class="text-xs text-white/60 mt-2">© Calpa Liu. All rights reserved.</div>
+

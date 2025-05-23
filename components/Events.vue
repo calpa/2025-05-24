@@ -6,13 +6,14 @@
     <div
       class="flex items-center justify-center gap-3 text-2xl font-extrabold tracking-wider"
     >
-      <span>過去兩月的精彩回顧 🔥</span>
+      <span v-if="filter === 'all'">過去兩月的精彩回顧 🔥</span>
+      <span v-if="filter === 'future'">未來活動 🔥</span>
     </div>
 
     <!-- 活動列表 -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div
-        v-for="(event, index) in events"
+        v-for="(event, index) in filteredEvents"
         :key="index"
         class="flex flex-col items-center rounded-xl p-2 shadow-md animate-fadein opacity-0"
         :class="[getEventColor(event.date)]"
@@ -47,6 +48,14 @@
 
 <script setup lang="ts">
 import dayjs from 'dayjs'
+import { computed } from 'vue'
+
+const props = defineProps({
+    filter: {
+        type: String,
+        default: 'all',
+    },
+})
 
 const events = [
   {
@@ -82,7 +91,20 @@ const events = [
     desc: '台北線下分享會',
     date: '2025/06/01',
   },
-]
+  {
+    icon: '⚡',
+    title: '《用 ChatGPT + Apps Script 打造 AI 表單自動化流程》',
+    desc: '香港線下分享會',
+    date: '2025/06',
+  }
+];
+
+const filteredEvents = computed(() => {
+    if (props.filter === 'all') {
+        return events;
+    }
+    return events.filter(event => dayjs(event.date).isAfter(dayjs('2025-05-24')));
+});
 
 const getEventColor = (date: string) => {
   if (dayjs(date).isSame(dayjs('2025-05-24'))) {
