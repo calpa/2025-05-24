@@ -52,6 +52,13 @@ class: flex flex-col h-full justify-center items-center gap-4
 <div class="text-xl font-bold">Calpa Liu</div>
 
 ---
+layout: center
+class: bg-[#172966] text-white
+---
+
+<Events />
+
+---
 layout: two-cols
 layoutClass: gap-4 bg-[#172966]
 class: flex flex-col h-full justify-center gap-4 text-white
@@ -428,27 +435,8 @@ class: bg-[#172966] text-white
 > 📌 只要換一組 Prompt，AI 就能幫你快速生出雛形
 
 ---
-layout: center
----
 
-## Q&A
-
----
-layout: two-cols
-layoutClass: gap-4
-class: flex flex-col h-full justify-center gap-4
----
-
-## 接下來的計畫
-
-- 30/5 台中 Vibe Coding 工作坊
-- 1/6 台北《AI 煉金術》實體分享會
-- 14/6 旅遊助手 App 實作分享會
-
-
-::right::
-
-![Train on Railway at Daytime](https://assets.calpa.me/b-k-HAl6CKxM3xU-unsplash.avif)
+<Events />
 
 ---
 layout: two-cols
