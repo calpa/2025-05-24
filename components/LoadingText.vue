@@ -1,3 +1,4 @@
+<!-- LoadingText.vue -->
 <template>
   <div class="fixed inset-y-0 right-0 w-1/2 flex items-center justify-center z-10 pointer-events-none">
     <!-- 背景半圓 -->
@@ -11,11 +12,47 @@
     </div>
 
     <!-- 打字文字 -->
-    <span class="relative z-20 py-3 drop-shadow-lg font-mono text-2xl tracking-widest whitespace-nowrap overflow-hidden inline-block animate-typing-loop">
-      Now loading...
+    <span class="relative z-20 py-3 drop-shadow-lg font-mono text-2xl tracking-widest whitespace-nowrap overflow-hidden inline-block" :style="{ animation: typingLoop }">
+      {{ props.text }}
     </span>
+
+    <Debute v-if="showDebute" />
   </div>
 </template>
+
+<script setup lang="ts">
+import { computed, onMounted, ref } from 'vue';
+
+const showDebute = ref(false);
+
+const props = defineProps({
+  text: {
+    type: String,
+    default: 'Now loading...',
+  },
+  isDebute: {
+    type: Boolean,
+    default: false,
+  },
+});
+
+const typingLoop = computed(() => {
+  if (props.isDebute) {
+    return 'typingLoop 10s steps(16, end) forwards';
+  }
+  return 'typingLoop 10s steps(16, end) infinite';
+});
+
+onMounted(() => {
+  showDebute.value = false;
+  
+  if (props.isDebute) {
+    setTimeout(() => {
+      showDebute.value = true;
+    }, 10000);
+  }
+});
+</script>
 
 <style>
 @keyframes typingLoop {
@@ -43,11 +80,5 @@
   50% {
     border-color: white;
   }
-}
-
-.animate-typing-loop {
-  width: 0;
-  animation:
-    typingLoop 10s steps(16, end) infinite;
 }
 </style>

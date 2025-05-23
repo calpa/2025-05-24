@@ -349,6 +349,9 @@ class: bg-[#172966] text-white
 📍 請到 Discord 的 <code>#2025-05-24</code> 頻道，對應貼上你的 emoji，例如 1️⃣ 2️⃣...
 </div>
 
+---
+
+<LoadingScene isDebute />
 
 ---
 class: flex flex-col h-full justify-center items-center gap-4

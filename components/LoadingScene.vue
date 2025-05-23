@@ -1,3 +1,4 @@
+<!-- LoadingScene.vue -->
 <template>
   <div class="bg-black w-full h-full absolute top-0 left-0 text-white">
     <!-- 動態背景漸層動畫容器 -->
@@ -37,9 +38,19 @@
     </div>
 
     <Particles />
-    <LoadingText />
+
+    <LoadingText :isDebute="props.isDebute" />
   </div>
 </template>
+
+<script setup lang="ts">
+const props = defineProps({
+  isDebute: {
+    type: Boolean,
+    default: false,
+  },
+});
+</script>
 
 <style>
 @keyframes breathing {
