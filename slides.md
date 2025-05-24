@@ -363,42 +363,57 @@ class: flex flex-col h-full justify-center items-center gap-4
 <Events filter="future" />
 
 ---
+layout: two-cols
+class: flex flex-col h-full justify-center
+---
 
-## 📍 5/30（台中）｜Vibe Coding 工作坊
+## 📍 5/30（台中）
+
+Vibe Coding 工作坊
 
 🧪 半天帶你從 0 到部署，親手打造自己的第一個產品！
-
 ✨ 適合沒寫過程式、但想做產品的人
-
 🛠 使用工具：Cursor + Supabase + Zeabur
-
 👥 小組協作、當場實作與展示
 
 🗓 時間：5/30（五）13:30 – 18:00
-
 📍 地點：台中 Monospace（台灣大道二段2號16樓之2）
 
 🎟 報名連結：
 👉 https://go.calpa.me/2025-05-30
 
+::right::
+
+<img src="https://assets.calpa.me/2025-05-30-banner.avif" class="w-full my-4 object-contain mx-auto" />
+
 
 ---
+layout: two-cols
+class: flex flex-col h-full justify-center
+---
 
-## 📍 6/1（台北）｜《AI 煉金術》實體分享會
+## 📍 6/1（台北）
+
+《AI 煉金術》實體分享會
+
 從靈感到 Side Project，用 AI 工具煉出你的創作流程。
-
 工具包含 ChatGPT、Firecrawl、Notion 等
-
 分享我從 prompt → 文章 → 產品的完整流程
 
 📅 時間：6/1（週日）15:00 – 18:00
 
-📍 地點：台北捷運站附近
+📍 地點：小樹屋｜龍眼 501
+- 捷運西門站 3 分鐘
+- 台北市萬華區成都路67號5樓之1-501房
 
 🆓 免費參加
 
 📌 報名表單：
 👉 https://go.calpa.me/2025-06-01
+
+::right::
+
+<img src="https://assets.thehapp.com/jZOMrUk.jpg" class="w-full my-4 object-contain mx-auto" />
 
 ---
 
