@@ -373,7 +373,9 @@ Vibe Coding 工作坊
 
 🧪 半天帶你從 0 到部署，親手打造自己的第一個產品！
 ✨ 適合沒寫過程式、但想做產品的人
+
 🛠 使用工具：Cursor + Supabase + Zeabur
+
 👥 小組協作、當場實作與展示
 
 🗓 時間：5/30（五）13:30 – 18:00
@@ -396,9 +398,9 @@ class: flex flex-col h-full justify-center
 
 《AI 煉金術》實體分享會
 
-從靈感到 Side Project，用 AI 工具煉出你的創作流程。
-工具包含 ChatGPT、Firecrawl、Notion 等
-分享我從 prompt → 文章 → 產品的完整流程
+- 從靈感到 Side Project，用 AI 工具煉出你的創作流程
+- 工具包含 ChatGPT、Firecrawl、Notion
+- 分享我從 prompt → 文章 → 產品的完整流程
 
 📅 時間：6/1（週日）15:00 – 18:00
 
